@@ -1,0 +1,38 @@
+<div class="cv-left-date">Project</div>
+
+<div>
+    {% if project.url %}
+    <a href="{{ project.url }}"><b>{{ project.title }}</b></a>
+    {% else %}
+    <b>{{ project.title }}</b>
+    {% endif %}
+</div>
+
+<div class="cv-description">
+    <i>
+        {% for tech in project.technologies %} {{ tech }}{% if forloop.last ==
+        false %}, {% endif %} {% endfor %}
+    </i>
+</div>
+
+<div class="cv-description">{{ project.description }}</div>
+
+<ul class="cv-description">
+    {% for detail in project.details %}
+    <li>{{ detail }}</li>
+    {% endfor %}
+</ul>
+
+{% if project.url %}
+<div class="pub-misc">
+    <a href="{{ project.url }}">
+        <i class="fas fa-link" aria-hidden="true"></i> Project Page
+    </a>
+</div>
+{% endif %} {% if project.figure %}
+<div class="project-figure">
+    <img src="{{ project.figure }}" alt="Screenshot of {{ project.title }}" />
+</div>
+{% endif %}
+
+<div class="cv-spacer-large"></div>

@@ -1,0 +1,51 @@
+- name: Languages
+  items:
+    - Python
+    - JavaScript
+    - Swift
+    - Java
+    - Rust
+    - Zig
+    - C
+    - CUDA
+    - Wolfram Language
+
+- name: Data
+  items:
+    - TensorFlow
+    - PyTorch
+    - NumPy
+    - Pandas
+    - scikit-learn
+    - Seaborn
+    - PyDeck
+    - PowerBI
+    - ApacheSpark
+    - MySQL
+
+- name: Cloud
+  items:
+    - AWS Lambda
+    - EC2
+    - SageMaker
+    - Heroku
+
+- name: Tools
+  items:
+    - Git
+    - GitHub
+    - Docker
+    - ROS2
+    - Linux
+    - Unix
+    - Mathematica
+    - Postman
+
+- name: Conceptual
+  items:
+    - Scrum
+    - Object-Oriented Design
+    - Data Structures
+    - Algorithms
+    - Machine Learning
+    - Mathematics

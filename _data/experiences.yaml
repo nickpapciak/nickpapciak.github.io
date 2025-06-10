@@ -1,0 +1,63 @@
+- institution: Datafruit
+  location: "San Francisco, CA"
+  position: Co-founder
+  year: "Jun. 2025 — Present"
+  description: "Y Combinator S25, details TBD"
+  institution-url: "https://datafruit.dev"
+  group-url: "https://datafruit.dev"
+  type: industry
+
+- institution: Meta
+  location: "Menlo Park, CA"
+  position: Software Engineering Intern
+  group: "Marketplace Feed Delivery"
+  year: "May. 2025 — Aug. 2025"
+  description: "Machine learning engineering on Facebook Marketplace. Left to pursue Datafruit in the YCombinator S25 batch."
+  institution-url: "https://meta.com"
+  group-url: "https://meta.com"
+  type: industry
+
+- institution: Small Satellite Research Lab
+  location: "Athens, GA"
+  position: Flight Software Developer
+  group: MOCI Cube-Satellite Project
+  year: "Nov. 2022 — May. 2023"
+  description: "Embedded systems development for the MOCI cube-satellite project. Developed on an interface board enabling command and control between the on-board computer (NVIDIA Jetson TX2i) and two cameras via USB. Saved 4 GB of memory by reverse-engineering proprietary camera drivers. Gained experience with mission critical systems, embedded development, USB protocol, and Linux kernel development."
+  institution-url: https://smallsat.uga.edu/images/documents/posters/LAB_FULL-2.pdf
+  group-url: https://smallsat.uga.edu/images/documents/posters/LAB_FULL-2.pdf
+  type: industry
+
+- institution: Georgia Institute of Technology
+  location: "Atlanta, GA"
+  position: Head Teaching Assistant
+  group: Design & Analysis of Algorithms
+  year: "May. 2024"
+  year-extra: "— May. 2025"
+  description: >
+    Head TA for the foundational algorithms courses, CS 3510 and CS 3511 (honors section).
+    Led course logistics and staff organization so faculty could focus on lecturing.
+    Created assignments, resources, and recitation materials to support over 1200 students in mastering core algorithmic concepts, including graph algorithms, dynamic programming, divide-and-conquer, cryptography, and complexity theory.
+  institution-url: https://www.cc.gatech.edu
+  group-url: https://www.cc.gatech.edu
+  type: leadership
+  subpositions:
+    - title: Head Teaching Assistant, CS 3511
+      year: "Jan. 2025 - May. 2025"
+      description: "Head TA for Prof. Merrick Furst for 70 students."
+    - title: Head Teaching Assistant, CS 3511
+      year: "Aug. 2024"
+      description: "Head TA for Dr. Gerandy Brito for 551 students."
+    - title: Teaching Assistant, CS 3510
+      year: "May. 2024"
+      description: "TA for Dr. Gerandy Brito for 77 students."
+
+- institution: Fulton Science Academy
+  location: "Alpharetta, GA"
+  position: Project Supervisor
+  group: Cube-Satellite & Astronomy Team
+  year: "Jul. 2023 —"
+  year-extra: "Present"
+  description: "Manage $80,000 in equipment and resources. Oversee logistics, talent, and stakeholder organization. Provide technical guidance and mentorship. The team won the 2023 NCSSS Innovative STEM Student Program of the Year Award."
+  institution-url: https://www.fultonscienceacademy.org/
+  group-url: https://www.fultonscienceacademy.org/
+  type: leadership

@@ -1,0 +1,43 @@
+{% unless forloop.first %}
+<div class="cv-spacer"></div>
+{% endunless %}
+
+<!-- Top-level experience -->
+<div class="cv-left-date">
+    {{ experience.year }}{% if experience.year-extra %} {{ experience.year-extra
+    }}{% endif %}
+</div>
+<div>
+    <a href="{{ experience.institution-url }}"
+        ><b>{{ experience.institution }}</b></a
+    >, {{ experience.location }}
+    <div>
+        <i
+            >{{ experience.position }}{% if experience.group %},
+            <a href="{{ experience.group-url }}">{{ experience.group }}</a>{%
+            endif %}</i
+        >
+    </div>
+
+    {% if experience.mentors %}
+    <div class="cv-description">
+        {% if experience.advisor == true %}Advisor:{% else %}Mentor:{% endif %}
+        {% for person in experience.mentors %} {% if forloop.last == false %} {%
+        include person.html person=person %}, {% else %} {% include person.html
+        person=person %} {% endif %} {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="cv-description">{{ experience.description }}</div>
+</div>
+
+<!-- Subpositions -->
+{% if experience.subpositions %} {% for sub in experience.subpositions %}
+<div class="cv-left-date">
+    {{ sub.year }}{% if sub.year-extra %} {{ sub.year-extra }}{% endif %}
+</div>
+<div class="grouped-article">
+    <div class="grouped-article-title"><b>{{ sub.title }}</b></div>
+    <div class="grouped-article-description">{{ sub.description }}</div>
+</div>
+{% endfor %} {% endif %}

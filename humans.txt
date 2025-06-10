@@ -1,0 +1,9 @@
+/* TEAM */
+	Author: Nicholas Papciak
+	Twitter: @completely_np
+	Location: San Francisco, United States
+
+/* SITE */
+    Language: English
+	Standards: HTML5, CSS3
+	Software: Jekyll

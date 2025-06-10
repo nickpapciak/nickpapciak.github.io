@@ -1,0 +1,53 @@
+- id: email
+  description: "npapciak3 (at) gatech.edu"
+  color: "#515151"
+  class: "fas fa-envelope icon"
+  url: "mailto:npapciak3@gatech.edu"
+  on-homepage: true
+  cv-group: 1
+
+- id: twitter
+  description: "@completely_np"
+  color: "#1da1f2"
+  class: "fab fa-twitter icon"
+  url: https://twitter.com/completely_np
+  on-homepage: true
+  cv-group: 2
+
+- id: github
+  description: "@nickpapciak"
+  color: "#6e5494"
+  class: "fab fa-github icon"
+  url: "https://github.com/nickpapciak"
+  on-homepage: true
+  cv-group: 2
+
+- id: linkedin
+  description: "nickpapciak"
+  color: "#0077b5"
+  class: "fab fa-linkedin-in icon"
+  url: "http://www.linkedin.com/in/nickpapciak"
+  on-homepage: true
+
+- id: home
+  description: "papciak.dev"
+  color: "#515151"
+  class: "fas fa-home icon"
+  url: "https://nick.papciak.dev"
+  on-homepage: false
+  cv-group: 1
+
+- id: cv
+  description: CV PDF
+  color: "#ba2818"
+  class: "far fa-file-pdf icon"
+  url: "/cv.pdf"
+  on-homepage: false
+  cv-group: 1
+
+- id: cv-web
+  description: CV
+  color: "#515151"
+  class: "fa fa-address-card icon"
+  url: "/cv"
+  on-homepage: false

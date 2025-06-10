@@ -1,0 +1,15 @@
+- name: Faculty Honors
+  description: "For maintaining a 4.0 GPA every semester."
+  year: 2024
+
+- name: NCSSS Innovative STEM Student Program of the Year Award
+  description: "https://www.ncsss.org/awards/"
+  year: 2023
+
+- name: Zell Miller Scholar
+  description: "Scholarship which fully covers the cost of tuition throughout college."
+  year: 2022
+
+- name: Presidential Scholar
+  description: 'For "A record of strong academic achievement and a history of accomplishment and leadership in co-curricular activities."'
+  year: 2022

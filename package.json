@@ -1,0 +1,19 @@
+{
+  "name": "nickpapciak.github.io",
+  "version": "1.0.0",
+  "description": "Nick's website.",
+  "main": "index.js",
+  "scripts": {
+    "start": "bundle exec jekyll serve --livereload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickpapciak/nickpapciak.github.io.git"
+  },
+  "author": "Nicholas Papciak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickpapciak/nickpapciak.github.io/issues"
+  },
+  "homepage": "https://github.com/nickpapciak/nickpapciak.github.io#readme"
+}

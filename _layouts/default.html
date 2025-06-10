@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+    {% include head.html %} {% if page.mathjax %}
+    <script>
+        MathJax = {
+            loader: {
+                load: ["[tex]/ams", "[tex]/physics", "[tex]/color"],
+            },
+            tex: {
+                packages: { "[+]": ["ams", "physics", "color"] },
+                inlineMath: [
+                    ["$", "$"],
+                    ["\\(", "\\)"],
+                ],
+                displayMath: [
+                    ["$$", "$$"],
+                    ["\\[", "\\]"],
+                ],
+            },
+            svg: {
+                fontCache: "global",
+            },
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    {% endif %}
+
+    <body>
+        <div class="site-wrapper">
+            {% include header.html %}
+            <main>{{ content }}</main>
+            <div class="footer-spacer"></div>
+            {% include footer.html %}
+        </div>
+    </body>
+
+    {% if page.jsarr %} {% for js in page.jsarr %}
+    <script>
+        {% include {{ js }} %}
+    </script>
+    {% endfor %} {% endif %}
+</html>

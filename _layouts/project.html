@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<article class="project-page">
+    <h1>{{ page.title }}</h1>
+
+    {% if page.technologies %}
+    <p><strong>Technologies:</strong> {{ page.technologies | join: ", " }}</p>
+    {% endif %} {% if page.description %}
+    <p>{{ page.description }}</p>
+    {% endif %}
+
+    <ul>
+        {% for detail in page.details %}
+        <li>{{ detail }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if page.figure %}
+    <img src="{{ page.figure }}" alt="{{ page.title }} screenshot" />
+    {% endif %}
+</article>
