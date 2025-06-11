@@ -1,6 +1,6 @@
 title: Nicholas Papciak
 tagline: cofounder at datafruit
-url: http://papciak.dev
+url: http://nick.papciak.dev
 baseurl: ""
 # gems: [jekyll-paginate]
 # paginate: 5
@@ -15,7 +15,7 @@ sass:
 
 author:
   name: Nicholas Papciak
-  url: http://papciak.dev
+  url: http://nick.papciak.dev
   email: npapciak3@gatech.edu
 
 markdown: kramdown

@@ -30,7 +30,7 @@
   on-homepage: true
 
 - id: home
-  description: "papciak.dev"
+  description: "nick.papciak.dev"
   color: "#515151"
   class: "fas fa-home icon"
   url: "https://nick.papciak.dev"
