@@ -5,7 +5,6 @@ permalink: /sf-purity-bingo/
 description: icebreaker
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -254,7 +253,10 @@ description: icebreaker
     <div class="container">
         <div class="header">
             <h1>🎯 SF PURITY BINGO</h1>
-            <p>Fill in the blanks with your name or someone else's name if it applies to them. One person can only fill out 5 spots on your bingo. Let's see how deep you are in the SF tech scene!</p>
+            <p>Fill in the blanks with either your name or someone else's name if it applies to them! One person can only fill out 5 spots on your bingo! Go talk to people and see if you can fill it all the way out.
+
+            <br><br>
+            Note: Get people's full names because we will be contacting random people to check the winner!</p>
         </div>
 
         <div class="content">
@@ -283,262 +285,199 @@ description: icebreaker
         </div>
     </div>
 
-    <script>
-        const bingoItems = [
-            "Applied to a job at OpenAI",
-            "Been asked \"what's your AGI timeline\"",
-            "Told someone your AGI timeline",
-            "Switched from ChatGPT to Claude",
-            "Switched back from Claude to ChatGPT",
-            "Gave up on learning and downloaded Cursor",
-            "Considered alternate careers when Devin was released",
-            "Built a RAG pipeline",
-            "Used LlamaIndex, Langchain, or CrewAI",
-            "Attempted to jailbreak ChatGPT, Claude, or any popular LLM",
-            "Taken a meeting at the blue bottle in 2 South Park",
-            "Taken a job interview/pitch meeting at Cafe Reveille",
-            "Worked late at Delahs coffee",
-            "Attended a party at Mission Control",
-            "Attended a party at AGI house",
-            "Co-worked from Newton or Solaris",
-            "Co-worked from SF Commons",
-            "Ate Souvla more than 3 times in one week",
-            "Drank too much at Monroes",
-            "Ordered an espresso martini at Balboas",
-            "Got rejected by YC but pretended you didn't apply",
-            "Got accepted into YC",
-            "Slept on a mattress without a bed frame",
-            "Started or attempted to start an AI startup",
-            "Pivoted your non-AI startup into an AI-first startup",
-            "Listened to a Latent Space podcast episode",
-            "Read \"The Chip War\" by Chris Miller",
-            "Read \"Zero to One\" by Peter Thiel",
-            "Read \"Atomic Habits\" by James Clear",
-            "Watched or taken a Deep Learning course",
-            "Bought an 8 Sleep",
-            "Attempted the 75 Hard",
-            "Stripped down for Archimedes Banya",
-            "Worn more than 1 fitness wearable simultaneously",
-            "Subscribed to Blueprint meals and didn't lose weight",
-            "Watched Polymarket during the election",
-            "Followed Sam Altman on Twitter",
-            "Followed Andrej Karpathy on Twitter",
-            "Tweeted \"OpenAI is nothing without its people\"",
-            "Tried airchat and churned",
-            "Asked someone out at a tech event",
-            "Gone on a date with someone you met at a tech event",
-            "Written a date me doc",
-            "Told someone you're not going to date because AGI is coming",
-            "Gone on a Hinge date with a non-tech person and realized how out of touch you are",
-            "Unironically called a startup \"ngmi\"",
-            "Had a friend say \"I'm gonna move to NYC\" because they can't pull in SF",
-            "Taken a Waymo",
-            "Actively calculated the gender ratio at an event",
-            "Lived in a hacker house (>50% founders)"
-        ];
+<!-- [Everything above <script>] remains the same -->
 
-        let completedItems = new Set();
-        let nameTracker = {};
+<script>
+    const bingoItems = [
+        "Applied to a job at OpenAI",
+        "Been asked \"what's your AGI timeline\"",
+        "Told someone your AGI timeline",
+        "Switched from ChatGPT to Claude",
+        "Switched back from Claude to ChatGPT",
+        "Gave up on learning and downloaded Cursor",
+        "Considered alternate careers when Devin was released",
+        "Built a RAG pipeline",
+        "Used LlamaIndex, Langchain, or CrewAI",
+        "Attempted to jailbreak ChatGPT, Claude, or any popular LLM",
+        "Taken a meeting at the blue bottle in 2 South Park",
+        "Taken a job interview/pitch meeting at Cafe Reveille",
+        "Worked late at Delahs coffee",
+        "Attended a party at Mission Control",
+        "Attended a party at AGI house",
+        "Co-worked from Newton or Solaris",
+        "Co-worked from SF Commons",
+        "Ate Souvla more than 3 times in one week",
+        "Drank too much at Monroes",
+        "Ordered an espresso martini at Balboas",
+        "Got rejected by YC but pretended you didn't apply",
+        "Got accepted into YC",
+        "Slept on a mattress without a bed frame",
+        "Started or attempted to start an AI startup",
+        "Pivoted your non-AI startup into an AI-first startup",
+        "Listened to a Latent Space podcast episode",
+        "Read \"The Chip War\" by Chris Miller",
+        "Read \"Zero to One\" by Peter Thiel",
+        "Read \"Atomic Habits\" by James Clear",
+        "Watched or taken a Deep Learning course",
+        "Bought an 8 Sleep",
+        "Attempted the 75 Hard",
+        "Stripped down for Archimedes Banya",
+        "Worn more than 1 fitness wearable simultaneously",
+        "Subscribed to Blueprint meals and didn't lose weight",
+        "Watched Polymarket during the election",
+        "Followed Sam Altman on Twitter",
+        "Followed Andrej Karpathy on Twitter",
+        "Tweeted \"OpenAI is nothing without its people\"",
+        "Tried airchat and churned",
+        "Asked someone out at a tech event",
+        "Gone on a date with someone you met at a tech event",
+        "Written a date me doc",
+        "Told someone you're not going to date because AGI is coming",
+        "Gone on a Hinge date with a non-tech person and realized how out of touch you are",
+        "Unironically called a startup \"ngmi\"",
+        "Had a friend say \"I'm gonna move to NYC\" because they can't pull in SF",
+        "Taken a Waymo",
+        "Actively calculated the gender ratio at an event",
+        "Lived in a hacker house (>50% founders)"
+    ];
 
-        // Simple cache - just try localStorage, fail silently if not available
-        function saveData() {
-            try {
-                const playerNameInput = document.getElementById('playerName');
-                const data = {
-                    completedItems: Array.from(completedItems),
-                    nameTracker: nameTracker,
-                    playerName: playerNameInput ? playerNameInput.value : ''
-                };
-                localStorage.setItem('sf-purity-bingo', JSON.stringify(data));
-            } catch (e) {
-                // localStorage not available, just continue without caching
-            }
-        }
+    let completedItems = new Set();
+    let nameTracker = {};
 
-        function loadSavedData() {
-            try {
-                const saved = localStorage.getItem('sf-purity-bingo');
-                if (saved) {
-                    const data = JSON.parse(saved);
-                    if (data.completedItems) {
-                        completedItems = new Set(data.completedItems);
-                    }
-                    if (data.nameTracker) {
-                        nameTracker = data.nameTracker;
-                    }
-                    if (data.playerName) {
-                        setTimeout(() => {
-                            const input = document.getElementById('playerName');
-                            if (input) input.value = data.playerName;
-                        }, 50);
-                    }
-                }
-            } catch (e) {
-                // localStorage not available or corrupted, just continue
-            }
-        }
+    function initializeBingo() {
+        const grid = document.getElementById('bingoGrid');
+        grid.innerHTML = '';
 
-        function initializeBingo() {
-            const grid = document.getElementById('bingoGrid');
-            grid.innerHTML = '';
+        loadFromLocalStorage();
 
-            bingoItems.forEach((item, index) => {
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'bingo-item';
-                itemDiv.dataset.index = index;
+        bingoItems.forEach((item, index) => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'bingo-item';
+            itemDiv.dataset.index = index;
 
-                itemDiv.innerHTML = `
-                    <div class="item-number">#${index + 1}</div>
-                    <div class="item-text">${item}</div>
-                    <input type="text" class="name-input" placeholder="Enter name..." />
-                `;
+            itemDiv.innerHTML = `
+                <div class="item-number">#${index + 1}</div>
+                <div class="item-text">${item}</div>
+                <input type="text" class="name-input" placeholder="Enter name..." />
+            `;
 
-                const input = itemDiv.querySelector('.name-input');
-
-                itemDiv.addEventListener('click', (e) => {
-                    if (e.target !== input) {
-                        input.focus();
-                    }
-                });
-
-                input.addEventListener('input', (e) => {
-                    handleInputChange(index, e.target.value, itemDiv);
-                });
-
-                grid.appendChild(itemDiv);
+            const input = itemDiv.querySelector('.name-input');
+            input.addEventListener('input', (e) => {
+                handleInputChange(index, e.target.value, itemDiv);
             });
 
-            // Load saved data and restore UI state
-            loadSavedData();
-            restoreUIState();
-            updateProgress();
-            saveData();
-        }
-
-        function restoreUIState() {
-            // Restore completed items and their names
-            completedItems.forEach(index => {
-                const itemDiv = document.querySelector(`[data-index="${index}"]`);
-                const input = itemDiv.querySelector('.name-input');
-                if (nameTracker[index]) {
-                    input.value = nameTracker[index];
-                    itemDiv.classList.add('completed');
-                }
-            });
-        }
-
-        function handleInputChange(index, value, itemDiv) {
-            const trimmedValue = value.trim();
-
-            if (trimmedValue) {
-                // Check the 5-person limit
-                if (!completedItems.has(index)) {
-                    const nameCount = Object.values(nameTracker).filter(name => name.toLowerCase() === trimmedValue.toLowerCase()).length;
-                    if (nameCount >= 5) {
-                        alert(`${trimmedValue} has already been used 5 times! Try someone else.`);
-                        itemDiv.querySelector('.name-input').value = '';
-                        return;
-                    }
-                }
-
-                // Update tracking
-                if (completedItems.has(index)) {
-                    // Remove old name from tracker
-                    delete nameTracker[index];
-                }
-
-                completedItems.add(index);
-                nameTracker[index] = trimmedValue;
+            if (completedItems.has(index)) {
+                input.value = nameTracker[index];
                 itemDiv.classList.add('completed');
-            } else {
-                // Remove from completed
-                if (completedItems.has(index)) {
-                    completedItems.delete(index);
-                    delete nameTracker[index];
-                    itemDiv.classList.remove('completed');
-                }
             }
 
-            updateProgress();
-        }
-
-        function updateProgress() {
-            const count = completedItems.size;
-            const percentage = (count / 50) * 100;
-
-            document.getElementById('progressCount').textContent = count;
-            document.getElementById('progressFill').style.width = percentage + '%';
-        }
-
-        function shareResults() {
-            const playerName = document.getElementById('playerName').value || 'Anonymous';
-            const score = completedItems.size;
-
-            let shareText = `🎯 SF PURITY BINGO RESULTS 🎯\n`;
-            shareText += `Player: ${playerName}\n`;
-            shareText += `Score: ${score}/50 (${Math.round((score/50)*100)}%)\n\n`;
-
-            shareText += `Completed items:\n`;
-            Array.from(completedItems).sort((a, b) => a - b).forEach(index => {
-                const name = nameTracker[index];
-                shareText += `✓ #${index + 1}: ${bingoItems[index]} (${name})\n`;
-            });
-
-            shareText += `\n🔗 Play at: [Your event URL here]`;
-
-            document.getElementById('finalScore').textContent = `${score}/50 (${Math.round((score/50)*100)}%)`;
-            document.getElementById('shareText').value = shareText;
-            document.getElementById('shareSection').style.display = 'block';
-
-            // Scroll to share section
-            document.getElementById('shareSection').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function resetBingo() {
-            if (confirm('Are you sure you want to reset all progress?')) {
-                completedItems.clear();
-                nameTracker = {};
-                document.getElementById('playerName').value = '';
-                document.getElementById('shareSection').style.display = 'none';
-
-                // Clear saved data
-                try {
-                    localStorage.removeItem('sf-purity-bingo');
-                } catch (e) {
-                    // Ignore if localStorage not available
-                }
-
-                document.querySelectorAll('.bingo-item').forEach(item => {
-                    item.classList.remove('completed');
-                    item.querySelector('.name-input').value = '';
-                });
-
-                updateProgress();
-            }
-        }
-
-        // Save player name when it changes
-        function setupEventListeners() {
-            const playerNameInput = document.getElementById('playerName');
-            if (playerNameInput) {
-                playerNameInput.addEventListener('input', saveData);
-            }
-        }
-
-        // Initialize the bingo on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeBingo();
-            setupEventListeners();
+            grid.appendChild(itemDiv);
         });
 
-        // Also initialize immediately in case DOMContentLoaded already fired
-        if (document.readyState === 'loading') {
-            // DOM is still loading
+        document.getElementById('playerName').addEventListener('input', saveToLocalStorage);
+        updateProgress();
+    }
+
+    function handleInputChange(index, value, itemDiv) {
+        const trimmedValue = value.trim();
+
+        if (trimmedValue) {
+            if (!completedItems.has(index)) {
+                const nameCount = Object.values(nameTracker).filter(name => name.toLowerCase() === trimmedValue.toLowerCase()).length;
+                if (nameCount >= 5) {
+                    alert(`${trimmedValue} has already been used 5 times! Try someone else.`);
+                    itemDiv.querySelector('.name-input').value = '';
+                    return;
+                }
+            }
+
+            if (completedItems.has(index)) {
+                delete nameTracker[index];
+            }
+
+            completedItems.add(index);
+            nameTracker[index] = trimmedValue;
+            itemDiv.classList.add('completed');
         } else {
-            // DOM is already loaded
-            initializeBingo();
-            setupEventListeners();
+            if (completedItems.has(index)) {
+                completedItems.delete(index);
+                delete nameTracker[index];
+                itemDiv.classList.remove('completed');
+            }
         }
-    </script>
+
+        saveToLocalStorage();
+        updateProgress();
+    }
+
+    function updateProgress() {
+        const count = completedItems.size;
+        const percentage = (count / 50) * 100;
+        document.getElementById('progressCount').textContent = count;
+        document.getElementById('progressFill').style.width = percentage + '%';
+    }
+
+    function shareResults() {
+        const playerName = document.getElementById('playerName').value || 'Anonymous';
+        const score = completedItems.size;
+
+        let shareText = `🎯 SF PURITY BINGO RESULTS 🎯\n`;
+        shareText += `Player: ${playerName}\n`;
+        shareText += `Score: ${score}/50 (${Math.round((score / 50) * 100)}%)\n\n`;
+        shareText += `Completed items:\n`;
+
+        Array.from(completedItems).sort((a, b) => a - b).forEach(index => {
+            const name = nameTracker[index];
+            shareText += `✓ #${index + 1}: ${bingoItems[index]} (${name})\n`;
+        });
+
+        shareText += `\n🔗 Play at: [Your event URL here]`;
+
+        document.getElementById('finalScore').textContent = `${score}/50 (${Math.round((score / 50) * 100)}%)`;
+        document.getElementById('shareText').value = shareText;
+        document.getElementById('shareSection').style.display = 'block';
+        document.getElementById('shareSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function resetBingo() {
+        if (confirm('Are you sure you want to reset all progress?')) {
+            completedItems.clear();
+            nameTracker = {};
+            document.getElementById('playerName').value = '';
+            document.getElementById('shareSection').style.display = 'none';
+
+            document.querySelectorAll('.bingo-item').forEach(item => {
+                item.classList.remove('completed');
+                item.querySelector('.name-input').value = '';
+            });
+
+            localStorage.removeItem('bingoData');
+            updateProgress();
+        }
+    }
+
+    function saveToLocalStorage() {
+        const data = {
+            playerName: document.getElementById('playerName').value,
+            completedItems: Array.from(completedItems),
+            nameTracker: nameTracker
+        };
+        localStorage.setItem('bingoData', JSON.stringify(data));
+    }
+
+    function loadFromLocalStorage() {
+        const saved = localStorage.getItem('bingoData');
+        if (saved) {
+            const data = JSON.parse(saved);
+            document.getElementById('playerName').value = data.playerName || '';
+            completedItems = new Set(data.completedItems || []);
+            nameTracker = data.nameTracker || {};
+        }
+    }
+
+    // Initialize on load
+    initializeBingo();
+</script>
+
 </body>
 </html>
