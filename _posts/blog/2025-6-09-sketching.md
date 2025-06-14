@@ -13,13 +13,22 @@ thumbnail: /images/blog/2025-6-09-sketching/clustering.png
 
 <style>
 .proof-box {
+  display: inline-block;
   background-color: #f9f9f9;
   border-left: 4px solid #ccc;
   padding: 1rem 1.25rem;
   margin: 2rem 0;
   border-radius: 6px;
   font-size: 1rem;
+
+  overflow-x: auto;
+  max-width: 100%;
+  box-sizing: border-box;
 }
+
+
+
+
 
 .proof-box::before {
   content: "🔍 Proof";
