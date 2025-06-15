@@ -431,7 +431,7 @@ description: icebreaker
             shareText += `✓ #${index + 1}: ${bingoItems[index]} (${name})\n`;
         });
 
-        shareText += `\n🔗 Play at: [Your event URL here]`;
+        shareText += `\n🔗 Play at: https://nick.papciak.dev/sf-purity-bingo/`;
 
         document.getElementById('finalScore').textContent = `${score}/50 (${Math.round((score / 50) * 100)}%)`;
         document.getElementById('shareText').value = shareText;
