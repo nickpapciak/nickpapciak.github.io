@@ -256,7 +256,7 @@ description: icebreaker
             <p>Fill in the blanks with either your name or someone else's name if it applies to them! One person can only fill out 5 spots on your bingo! Go talk to people and see if you can fill it all the way out.
 
             <br><br>
-            Note: Get people's full names because we will be contacting random people to check the winner!</p>
+            Note: Get full names because we will be contacting random people to check the winner!</p>
         </div>
 
         <div class="content">
