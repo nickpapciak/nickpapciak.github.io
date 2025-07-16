@@ -159,7 +159,7 @@ So that <span class="inlinecode">$\text{Pr}(\text{out of bounds}) \le \delta$</s
 
 ## Algorithmic Speedup
 
-The na\"ive algorithm to compute all pairwise distances takes <span class="inlinecode">$\mathcal{O}((n^2d)$</span> time, to compute the distance in <span class="inlinecode">$\mathcal{O}((d)$</span> time for <span class="inlinecode">$\binom{n}{2}$</span> pairs. Since the matrix is  dimension <span class="inlinecode">$\mathcal{O}((\log(n)) \times d$</span>, it takes <span class="inlinecode">$\mathcal{O}((d\log(n))$</span> time to project a vector down, and we do this <span class="inlinecode">$n$</span> times. Once we have the lower dimensional vectors, however, we just need to compute the <span class="inlinecode">$\binom{n}{2} = \mathcal{O}((n^2)$</span> pairwise distances in <span class="inlinecode">$\mathcal{O}((\log(n))$</span> time each. So the algorithm runs in <span class="inlinecode">$\mathcal{O}((dn\log(n) + n^2\log(n))$</span> time, which is good if <span class="inlinecode">$d \gg \log(n)$</span>. This says we can get a good approximation much quicker than brute-force!
+The naive algorithm to compute all pairwise distances takes <span class="inlinecode">$\mathcal{O}((n^2d)$</span> time, to compute the distance in <span class="inlinecode">$\mathcal{O}((d)$</span> time for <span class="inlinecode">$\binom{n}{2}$</span> pairs. Since the matrix is  dimension <span class="inlinecode">$\mathcal{O}((\log(n)) \times d$</span>, it takes <span class="inlinecode">$\mathcal{O}((d\log(n))$</span> time to project a vector down, and we do this <span class="inlinecode">$n$</span> times. Once we have the lower dimensional vectors, however, we just need to compute the <span class="inlinecode">$\binom{n}{2} = \mathcal{O}((n^2)$</span> pairwise distances in <span class="inlinecode">$\mathcal{O}((\log(n))$</span> time each. So the algorithm runs in <span class="inlinecode">$\mathcal{O}((dn\log(n) + n^2\log(n))$</span> time, which is good if <span class="inlinecode">$d \gg \log(n)$</span>. This says we can get a good approximation much quicker than brute-force!
 
 ## Subspace Embedding
 
@@ -175,4 +175,4 @@ $$</div>
 with probability <span class="inlinecode">$1-\delta$</span>.
 
 **Proof**
-Ideally, we want to apply the union bound over all vectors in the subspace. However, there's infinitely many vectors, and we can't do that... We'll talk about this more next week, but the main idea is to look at a nearby neighborhood of each vector, called the <span class="inlinecode">$\epsilon$</span>-net. Stay tuned!
+Ideally, we want to apply the union bound over all vectors in the subspace. However, there's infinitely many vectors, and we can't do that... The main idea is to look at a nearby neighborhood of each vector, called the <span class="inlinecode">$\epsilon$</span>-net. Stay tuned!
