@@ -7,7 +7,7 @@ permalink: blog/
 <p>Assorted writings.</p>
 
 <div class="posts">
-  {% for post in site.categories.blog limit:5 %}
+  {% for post in site.categories.blog %}
   <article class="post">
     <h2 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">

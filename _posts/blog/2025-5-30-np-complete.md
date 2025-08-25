@@ -50,7 +50,7 @@ thereby showing
 <div>$$\texttt{CLIQUE} \equiv_p \texttt{IS} \equiv_p \texttt{HP} \equiv_p \texttt{TSP}$$</div>
 which says that if we could solve any one of these problems, we could solve them all.
 
-<small>Note, this works because reductions are transitive, <span class="inlinecode">$\texttt{A} \le_p \texttt{B}$</span> and <span class="inlinecode">$\texttt{B} \le_p \texttt{C} \Rightarrow \texttt{A} \le_p \texttt{C}$</span>, which is true because the reduction from <span class="inlinecode">$\texttt{A$}</span> to <span class="inlinecode">$\texttt{B}$</span> can be composed with the reduction from <span class="inlinecode">$\texttt{B}$</span> to <span class="inlinecode">$\texttt{C}$</span> to get a reduction from <span class="inlinecode">$\texttt{A}$</span> to <span class="inlinecode">$\texttt{C}$</span>.</small>
+<small>Note, this works because reductions are transitive, <span class="inlinecode">$\texttt{A} \le_p \texttt{B}$</span> and <span class="inlinecode">$\texttt{B} \le_p \texttt{C} \Rightarrow \texttt{A} \le_p \texttt{C}$</span>, which is true because the reduction from <span class="inlinecode">$\texttt{A}$</span> to <span class="inlinecode">$\texttt{B}$</span> can be composed with the reduction from <span class="inlinecode">$\texttt{B}$</span> to <span class="inlinecode">$\texttt{C}$</span> to get a reduction from <span class="inlinecode">$\texttt{A}$</span> to <span class="inlinecode">$\texttt{C}$</span>.</small>
 
 ### NP-completeness
 

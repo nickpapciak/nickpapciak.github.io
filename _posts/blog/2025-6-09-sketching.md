@@ -175,4 +175,4 @@ $$</div>
 with probability <span class="inlinecode">$1-\delta$</span>.
 
 **Proof**
-Ideally, we want to apply the union bound over all vectors in the subspace. However, there's infinitely many vectors, and we can't do that... The main idea is to look at a nearby neighborhood of each vector, called the <span class="inlinecode">$\epsilon$</span>-net. Stay tuned!
+Ideally, we want to apply the union bound over all vectors in the subspace. However, there's infinitely many vectors, and we can't do that... The main idea is to look at a nearby neighborhood of each vector, called the <span class="inlinecode">$\epsilon$</span>-net.

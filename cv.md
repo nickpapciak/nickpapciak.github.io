@@ -8,12 +8,7 @@ jsarr:
 
 <h1 id="cv-title"><a href="{{ site.url }}">Nicholas Papciak</a></h1>
 
-<p id="cv-subtitle"><i>data engineer with a background in <span class="cv-vis">ml</span> + <span class="cv-ai">cs theory</span></i></p>
-
-
-<div>
-I build <b><span class="cv-vis">declarative data systems</span></b> using <b><span class="cv-ai">algorithmic foundations</span></b> to make pipelines more reliable and accessible.
-</div>
+<p id="cv-subtitle"><i>engineer / founder with a background in <span class="cv-vis">ml</span> + <span class="cv-ai">cs theory</span></i></p>
 
 <div class="cv-spacer"></div>
 

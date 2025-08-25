@@ -38,7 +38,7 @@ title: Home
   </div>
 	<div style="height: 1rem"></div>
 	<div>
-	That startup is <img class="intro-logo" style="width: 16px; padding-bottom: 5px; padding-left: 3px;" src="/images/datafruit_logo.svg"> <a href="https://datafruit.dev">datafruit</a>, which is redefining data engineering to be declarative, idomatic, and accessible to ai agents. We are backed by <span style="color: #ff6600; white-space: nowrap;">λf.(λx.f (x x)) (λx.f (x x))</span>
+	That startup is <img class="intro-logo" style="width: 16px; padding-bottom: 5px; padding-left: 3px;" src="/images/datafruit_logo.svg"> <a href="https://datafruit.dev">datafruit</a>. We are backed by <span style="color: #ff6600; white-space: nowrap;">λf.(λx.f (x x)) (λx.f (x x))</span>
  and currently in the S25 batch.
 </div>
 
