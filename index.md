@@ -30,7 +30,7 @@ title: Home
 		<a href="{{ site.url }}/blog"><div><i class="fa fa-list-ul icon icon-right-space"></i>Blog</div></a>
 	</div>
 	<div>
-	I am a 21 y/o aspiring computer scientist (<em>aspiring</em> because my career path has so far turned me into a software engineer).
+	I am a 22 y/o aspiring computer scientist (<em>aspiring</em> because my career path has so far turned me into a software engineer).
 	</div>
 	<div style="height: 1rem"></div>
 	<div>
